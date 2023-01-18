@@ -1,0 +1,18 @@
+[package]
+name = "uniffi-hello-world"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.maturin]
+name = "hello_world._uniffi"
+
+[lib]
+name = "hello_world_ffi"
+crate-type = ["cdylib"]
+
+[dependencies]
+uniffi = "0.22.0"
+uniffi_macros = "0.22.0"
+
+[build-dependencies]
+uniffi_build = { version = "0.22.0", features = ["builtin-bindgen"] }
